@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://browserpinnedchats/skin/browser.css" type="text/css"?>
+
+<overlay id="browserpinnedchats-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript" src="chrome://browserpinnedchats/content/browserPinnedChats.js"/>
+
+  <commandset id="mainCommandSet">
+    <command id="cmd_pinnedAdd" oncommand="addPinnedChat(event);" label="Add Pinned Chat"/>
+    <command id="cmd_pinnedRemove" oncommand="removePinnedChat(event);" label="Remove Pinned Chat"/>    
+  </commandset>
+
+  <menupopup id="menu_ToolsPopup">
+    <menuitem id="pinnedchat-add"
+              command='cmd_pinnedAdd' />
+    <menuitem id="pinnedchat-remove"
+              command='cmd_pinnedRemove' />
+  </menupopup>
+
+  <!-- the hbox that contains our chat windows -->
+  <vbox id="browser-bottombox">
+    <toolbar id="pinnedchat-toolbar" 
+      mousethrough="always"
+      style="
+        -moz-appearance:none;transparent:true;opacity:1;margin-right:240px;margin-top:-32px;"
+      >
+      <hbox pack="end" id="pinnedchats" flex="1"
+        mousethrough="always"
+        style="height:32px;width:100%;opacity:1.0;padding-left:8px;-moz-box-pack:end"
+      >
+      </hbox>
+    </toolbar>
+  </vbox>
+
+</overlay>

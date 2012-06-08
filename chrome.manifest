@@ -1,0 +1,8 @@
+content   browserpinnedchats                 content/
+skin      browserpinnedchats classic/1.0     skin/
+skin      browserpinnedchats-plat classic/1.0     skin/gnomestripe/ os=Linux
+skin      browserpinnedchats-plat classic/1.0     skin/winstripe/   os=WINNT
+skin	  browserpinnedchats-plat classic/1.0     skin/pinstripe/   os=Darwin
+
+overlay	chrome://browser/content/browser.xul   chrome://browserpinnedchats/content/overlay.xul
+resource browserpinnedchats ./
